@@ -15,6 +15,7 @@
   --color-accent-hover: #4a0bde;
   --color-tertiary: #201837;
   --color-tertiary-hover: #271f40;
+  
 
   /* fonts */
   --font-primary: "Sometype Mono ";
@@ -29,13 +30,47 @@ body {
 }
 
 .h2 {
-    @apply text-[32px] md:text-[36px] xl:text-[38px] leading-[1.15] tracking-tight font-medium;
-  }
+  @apply text-[32px] md:text-[36px] xl:text-[38px] leading-[1.15] tracking-tight font-medium;
+}
 
 .h3 {
   @apply text-[28px] md:text-[30px] xl:text-[32px] leading-[1.2]  font-medium;
 }
 
 .h4 {
-    @apply text-[28px] md:text-[30px] xl:text-[32px] leading-[1.2]  font-medium;
-  }
+  @apply text-[22px] md:text-[26px]  font-medium leading-snug;
+}
+
+.container {
+  @apply px-[15px];
+}
+
+/* btns */
+.btn {
+  @apply flex items-center justify-center rounded-full
+   cursor-pointer transition-all font-medium h-[56px];
+}
+
+.btn-sm{
+  @apply min-w-[168px] px-5 text-[15px] font-semibold;
+}
+
+.btn-lg{
+  @apply min-w-[200px] px-6 ;
+}
+
+/* btn colors */
+.btn-accent {
+  @apply bg-accent  hover:bg-accent-hover;
+}
+
+.btn-tertiary {
+  @apply bg-tertiary hover:bg-tertiary-hover;
+  
+}
+.btn-white {
+  @apply bg-white text-primary hover:bg-white/90;
+}
+  
+
+
