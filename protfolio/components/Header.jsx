@@ -15,9 +15,9 @@ import NavLinks from "./NavLinks";
 
 const Header = () => {
   return (
-    <header className=" 2xl:hidden absolute z-40 left-0 top-0 right-0">
-      <div className="container mx-auto">
-        <div className=" flex items-center justify-between  py-6">
+    <header className="2xl:hidden absolute z-40 left-0 top-0 right-0 ">
+      <div className="container mx-auto px-[15px]">
+        <div className="flex items-center justify-between py-6">
           {/* LOGO */}
           <Logo />
           {/* nav mobile */}
@@ -34,13 +34,13 @@ const Header = () => {
                   <Logo />
                 </SheetTitle>
                 <SheetDescription className="sr-only">
-                  Navigation Menu{" "}
+                  Navigation Menu
                 </SheetDescription>
               </SheetHeader>
-              <NavLinks containerStyles="flex  flex-col gap-8 max-w-[100px]" />
+              <NavLinks containerStyles="flex flex-col gap-8 max-w-[100px]" />
               <div className="">
                 <button className="btn btn-lg btn-tertiary mb-16">
-                  <div className=" flex items-center justify-between  gap-2">
+                  <div className="flex items-center justify-between gap-2">
                     <span>Download CV</span>
                     <MdFileDownload className="text-xl" />
                   </div>

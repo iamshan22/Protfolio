@@ -5,7 +5,7 @@ import { MdFileDownload } from "react-icons/md";
 
 const MainNav = () => {
   return (
-    <nav className="w-full py-16">
+    <nav className="w-full pt-16">
       <div className=" flex flex-col h-full items-center justify-between ">
         <Logo />
         <NavLinks containerStyles=" flex flex-col gap-6" />

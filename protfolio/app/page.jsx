@@ -18,13 +18,13 @@ const Home = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className=" flex  items-center  h-screen"
+      className=" h-screen flex items-center "
     >
       {/* pattern */}
       <Pattern />
       <div className=" flex flex-col xl:flex-row items-center justify-between w-full ">
         {/*text*/}
-        <div className="w-full xl:w-[550px]">
+        <div className="w-full xl:w-[550px] flex flex-col items-center xl:items-start text-center xl:text-left">
           <h1 className="h1 flex-1 mb-[28px]  ">
             Hi! I'm Shan,
             <br />
@@ -37,7 +37,7 @@ const Home = () => {
               cursor={true}
             />
           </h1>
-          <p className="max-w-[500px] mb-[44px] flex flex-col items-center xl:items-start text-center xl:text-left ">
+          <p className="max-w-[500px] mb-[44px]  ">
             {" "}
             "Bringing ideas to life through Python — crafting seamless
             full-stack solutions that blend creativity with code."{" "}
@@ -49,18 +49,18 @@ const Home = () => {
             </div>
           </button>
           {/* contact info */}
-          <div className=" flex flex-col xl:flex-row xl:items-center gap-4 xl:gap-8 mb-12 xl:mb-0 ">
+          <div className=" flex flex-col xl:flex-row xl:items-center gap-4 xl:gap-8  mb-12 xl:mb-0">
             {/* Phone */}
             <div className=" flex items-center gap-4 text-lg">
               <span className="text-accent">
-                <HiOutlinePhone />
+                <HiOutlinePhone className="text-xl"/>
               </span>
               <span>+91 8143445559</span>
             </div>
             {/* Email */}
             <div className=" flex items-center gap-4 text-lg">
               <span className="text-accent">
-                <HiOutlineMail />
+                <HiOutlineMail className="text-xl" />
               </span>
               <span>Konashankaraditya@gmail.com</span>
             </div>
@@ -68,7 +68,7 @@ const Home = () => {
           {/* social links */}
           <Socials
             containerStyles=" flex 2xl:flex-col gap-6 xl:hidden 2xl:flex 2xl:absolute
-             2xl:top-1/5 2xl:right-9 2xl:-transform 2xl:translate-x-1/2 2xl:translate-y-1/2  "
+             2xl:top-1/2 2xl:right-2 2xl:-transform 2xl:-translate-x-1/2 2xl:-translate-y-1/2  "
             iconStyle="bg-accent text-white hover:bg-accent-hover transition w-[48px] h-[48px]  text-[22px]  flex items-center justify-center rounded-full cursor-pointer"
           />
         </div>
@@ -83,7 +83,7 @@ const Home = () => {
             quality={100}
             className=" absolute top-5 left-[50px] "
           />
-          <div className="w-full h-[100px] absolute bottom-0 left-0 right-0  bg-gradient-to-t from-primary via-primary/90  to-primary/40 "></div>
+          <div className="w-full h-[100px] absolute bottom-0 left-0 right-0  bg-gradient-to-t from-primary via-primary/90  to-primary/40 "/>
         </div>
       </div>
     </motion.section>
