@@ -13,19 +13,19 @@ import { ImQuotesLeft } from "react-icons/im";
 // data
 const testimonial = [
   {
-    name: "John Doe",
+    name: "Alice Johnson",
     message:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "This service is amazing! It has completely exceeded my expectations. Highly recommend to everyone.",
   },
   {
-    name: "John Doe",
+    name: "Michael Brown",
     message:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "A fantastic experience from start to finish. The team was professional and the results were outstanding.",
   },
   {
-    name: "John Doe",
+    name: "Sophia Williams",
     message:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "I am so impressed with the quality and attention to detail. Will definitely use this service again!",
   },
 ];
 
@@ -35,7 +35,8 @@ const Testimonial = () => {
       modules={[Autoplay]}
       loop={true}
       autoplay={{ delay: 4000, disableOnInteraction: false }}
-      className="w-full max-w-[300px] md:max-w-[520px] bg-secondary rounded-lg "
+      className="w-full max-w-[300px] md:max-w-[520px] bg-secondary
+       rounded-lg "
     >
       {testimonial.map((person, index) => {
         return (
@@ -44,7 +45,7 @@ const Testimonial = () => {
               <ImQuotesLeft className=" hidden xl:flex text-8xl pt-0 text-accent" />
               <div className="flex flex-col gap-2">
                 <p>{person.message}</p>
-                <p>{person.name}</p>
+                <p className="self-end text-accent font-semibold">{person.name}</p>
               </div>
             </div>
           </SwiperSlide>

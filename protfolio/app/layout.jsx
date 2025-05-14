@@ -22,15 +22,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-      className={`${sometypeMono.variable} antialiased overflow-hidden relative`}>
+      className={`${sometypeMono.variable} antialiased overflow-hidden relative `}>
         <Gradient />
         <RecangleTransition />
         <PageTransitions>
           <div className=" flex">
-            <div className=" hidden 2xl:flex w-[285px] h-screen bg-secondary ">
+            <div className=" hidden 2xl:flex w-[285px] h-screen bg-secondary  ">
               <MainNav />
             </div>
-            <div className="w-full max-w-[1130px] mx-auto px-[15px]"> 
+            <div className="w-full max-w-[1130px] mx-auto px-[15px] mt-[80px]">
               <Header />
               <div>{children}</div>
             </div>
