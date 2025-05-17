@@ -1,54 +1,62 @@
 "use client";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 
-// variants for the animation
-const rectangleVariants = {
+const layerVariants = (delay, skew, zIndex) => ({
   initial: {
     y: "-100%",
-    height: "100%",
+    skewY: skew,
+    scale: 1.1,
   },
   animate: {
     y: "0%",
-    height: "0%",
+    skewY: 0,
+    scale: 1,
+    transition: {
+      delay,
+      duration: 0.9,
+      ease: [0.63, 0, 0.17, 1],
+    },
   },
   exit: {
-    y: ["0%", "-100%"],
-    height: ["0%", "100%"],
+    y: "-100%",
+    skewY: skew,
+    scale: 1.05,
+    transition: {
+      delay: 0,
+      duration: 0.8,
+      ease: [0.63, 0, 0.17, 1],
+    },
   },
-};
+});
+
+const layers = [
+  { color: "from-[#1b162b] to-[#291c46]", delay: 0, skew: -6, z: 30 },
+  { color: "from-[#241e56] to-[#3b2678]", delay: 0.2, skew: -4, z: 20 },
+  { color: "from-[#2e2743] to-[#43305c]", delay: 0.4, skew: -2, z: 10 },
+];
 
 const Rectangle = () => {
+  useEffect(() => {
+    const audio = new Audio("/4.mp3");
+    audio.volume = 0.5;
+    audio.play().catch((err) => console.warn("Sound play failed:", err));
+  }, []);
+
   return (
     <>
-      <motion.div
-        variants={rectangleVariants}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-        transition={{ delay: 0, duration: 0.6, ease: [0.63, 0, 0.17, 1] }}
-        className="fixed top-full w-screen h-screen z-30 bg-[#1b162b]"
-      />
-
-      <motion.div
-        variants={rectangleVariants}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-        transition={{ delay: 0.25, duration: 0.8, ease: [0.63, 0, 0.17, 1] }}
-        className="fixed top-full w-screen h-screen z-20 bg-[#241e56]"
-      />
-
-
-      
-
-      <motion.div
-        variants={rectangleVariants}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-        transition={{ delay: 0.35, duration: 1, ease: [0.63, 0, 0.17, 1] }}
-        className="fixed top-full w-screen h-screen z-10 bg-[#2e2743]"
-      />
+      {layers.map(({ color, delay, skew, z }, i) => (
+        <motion.div
+          key={i}
+          variants={layerVariants(delay, skew, z)}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          style={{ zIndex: z }}
+          className={`fixed top-full left-0 w-screen h-screen bg-gradient-to-br ${color} origin-top`}
+          aria-hidden="true"
+        />
+      ))}
     </>
   );
 };

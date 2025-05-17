@@ -49,14 +49,14 @@ const About = () => {
               <h2 className="h2 mb-6">
                 <span className="text-accent">Shan</span>
               </h2>
-              <p className=" max-w-[530px] mb-12">
+              <p className=" max-w-[540px] mb-12">
                 Full Stack Python Developer skilled in Python, Flask/Django,
                 modern front-end tools. Experienced with Google Cloud and
                 NenoDB. I write clean, efficient code and enjoy building fast,
                 user-friendly web apps. Open to opportunities to learn and grow
                 with great teams.
               </p>
-              <div className=" flex flex-col items-center gap-16 ">
+              <div className=" flex flex-col items-start gap-16 ">
                 <Stats />
                 <Testimonial />
                 <Info />

@@ -80,6 +80,12 @@ body {
   margin: 0 !important;
 }
 
+/* swiper bullets */
+.swiper-horizontal-bullets >.swiper-pagination-bullets .swiper-horizontal-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  @apply bg-accent
+}
+
 
   
 
