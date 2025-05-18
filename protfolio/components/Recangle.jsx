@@ -38,7 +38,7 @@ const layers = [
 
 const Rectangle = () => {
   useEffect(() => {
-    const audio = new Audio("/4.mp3");
+    const audio = new Audio("/1.mp3");
     audio.volume = 0.5;
     audio.play().catch((err) => console.warn("Sound play failed:", err));
   }, []);
