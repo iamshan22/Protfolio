@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
             <div className=" hidden 2xl:flex w-[285px] h-screen bg-secondary  ">
               <MainNav />
             </div>
-            <div className="w-full max-w-[1130px] mx-auto px-[15px] mt-[80px]">
+            <div className="w-full max-w-[1130px] mx-auto px-[15px] mt-[50px]">
               <Header />
               <div>{children}</div>
             </div>
