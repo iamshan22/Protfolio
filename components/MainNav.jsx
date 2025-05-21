@@ -11,7 +11,7 @@ const MainNav = () => {
         <NavLinks containerStyles=" flex flex-col gap-6" />
         <button className="btn btn-lg btn-tertiary mb-16">
           <div className=" flex items-center justify-between  gap-2">
-            <span>Download CV</span>
+            <span>Download Resume</span>
             <MdFileDownload className="text-xl" />
           </div>
         </button>
