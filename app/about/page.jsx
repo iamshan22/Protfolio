@@ -5,7 +5,7 @@ import Image from "next/image";
 
 // components
 import Stats from "@/components/Stats";
-import Testimonial from "@/components/testimonial";
+import Testimonial from "@/components/Testimonial";
 import Info from "@/components/Info";
 import Journey from "@/components/Journey";
 import Skills from "@/components/Skills";
